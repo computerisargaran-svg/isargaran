@@ -9,7 +9,7 @@ body{
     background:#0d1117;
     color:white;
     text-align:center;
-    margin-top:100px;
+    margin:0;
 }
 
 h1{
@@ -46,66 +46,69 @@ header{
     color:#cccccc;
     margin-bottom:30px;
 }
-</style>
+/* ===== Hero Section ===== */
+
 .hero{
     height:500px;
+    margin-top:40px;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
     text-align:center;
-    color:white;
+    color:#fff;
+
+    border-radius:20px;
+}
+
+.hero-text{
+    width:90%;
+    max-width:800px;
 }
 
 .hero h1{
     font-size:48px;
+    color:#fff;
     margin-bottom:20px;
 }
 
 .hero p{
-    width:700px;
-    max-width:90%;
-    margin:auto;
-    line-height:2;
     font-size:20px;
+    line-height:2;
+    color:#ddd;
+    margin-bottom:35px;
 }
 
 .btn{
-
     display:inline-block;
-
-    margin-top:35px;
 
     padding:15px 35px;
 
-    background:#0d6efd;
-
-    color:white;
+    background:#00bfff;
+    color:#fff;
 
     text-decoration:none;
 
     border-radius:8px;
 
-    transition:.3s;
+    transition:0.3s;
 }
 
 .btn:hover{
-
-    background:#0b5ed7;
-
+    background:#0099cc;
     transform:translateY(-3px);
-
 }
+</style>
 </head>
-
 <body>
 
 <header>
