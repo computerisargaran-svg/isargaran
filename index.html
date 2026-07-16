@@ -47,6 +47,63 @@ header{
     margin-bottom:30px;
 }
 </style>
+.hero{
+    height:500px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    width:700px;
+    max-width:90%;
+    margin:auto;
+    line-height:2;
+    font-size:20px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-3px);
+
+}
 </head>
 
 <body>
@@ -64,3 +121,17 @@ header{
     <button>تماس با ما</button>
 
 </header>
+<section class="hero">
+    <div class="hero-text">
+        <h1>فروشگاه ایثارگران</h1>
+
+        <p>
+            عرضه کننده انواع قطعات و لوازم جانبی کامپیوتر، لپ‌تاپ،
+            تجهیزات شبکه و لوازم دیجیتال با بهترین قیمت و ضمانت اصالت کالا
+        </p>
+
+        <a href="#products" class="btn">
+            مشاهده محصولات
+        </a>
+    </div>
+</section>
