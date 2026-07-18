@@ -184,7 +184,7 @@ height:100%;
 background:rgba(0,0,0,.75);
 }
 
-.modal-content{
+.modal-content{.modal-content{
 background:#161b22;
 color:white;
 width:90%;
@@ -196,8 +196,11 @@ box-shadow:0 0 25px rgba(0,191,255,.5);
 position:relative;
 text-align:right;
 animation:popup .3s;
-}
 
+max-height:80vh;
+overflow-y:auto;
+overflow-x:hidden;
+}
 @keyframes popup{
 from{
 transform:scale(.8);
