@@ -10,6 +10,8 @@ body{
     color:white;
     text-align:center;
     margin:0;
+    direction:rtl;
+    overflow-x:hidden;
 }
 
 h1{
@@ -35,12 +37,11 @@ button{
 header{
     background:#161b22;
     width:80%;
-    margin:auto;
+    margin:30px auto 0;
     padding:40px;
     border-radius:20px;
     box-shadow:0 0 20px rgba(0,191,255,.3);
 }
-
 .subtitle{
     font-size:20px;
     color:#cccccc;
@@ -100,7 +101,7 @@ header{
 
     border-radius:8px;
 
-    transition:0.3s;
+transition:all .3s ease;
 }
 
 .btn:hover{
@@ -132,6 +133,9 @@ header{
     box-shadow:0 0 20px rgba(0,0,0,.4);
     transition:.3s;
     padding-bottom:25px;
+    display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .product-card:hover{
@@ -166,7 +170,8 @@ header{
     border-radius:10px;
     cursor:pointer;
     font-size:18px;
-    transition:.3s;
+transition:all .3s ease;
+    margin-top:auto;
 }
 
 .buy-btn:hover{
@@ -183,6 +188,19 @@ width:100%;
 height:100%;
 background:rgba(0,0,0,.75);
 overflow-y:auto;
+}
+    .modal-content{
+background:#161b22;
+color:white;
+width:90%;
+max-width:650px;
+margin:5% auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,191,255,.5);
+position:relative;
+text-align:right;
+animation:popup .3s;
 }
 @keyframes popup{
 from{
