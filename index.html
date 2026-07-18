@@ -286,7 +286,9 @@ font-size:20px;
 <img src="images/hp650g3.webp" alt="HP ProBook 650 G3">
     <h3>HP ProBook 650 G3</h3>
     <p class="price">۳۳,۸۰۰,۰۰۰ تومان</p>
-    <button class="buy-btn">مشاهده محصول</button>
+<button class="buy-btn" onclick="openLaptop1()">
+مشاهده محصول
+</button>
 </div>
 
 <div class="product-card">
@@ -398,6 +400,63 @@ font-size:20px;
 </div>
 
 </section>
+
+<div id="laptop1" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeLaptop1()">&times;</span>
+
+        <h2 style="text-align:center;color:#00bfff;">
+        HP ProBook 650 G3
+        </h2>
+
+        <div class="specs">
+
+            <p><strong>پردازنده:</strong> Intel Core i5-7300U</p>
+            <p><strong>رم:</strong> 8GB DDR4</p>
+            <p><strong>حافظه:</strong> 256GB SSD</p>
+            <p><strong>کارت گرافیک:</strong> Intel HD Graphics 620</p>
+            <p><strong>نمایشگر:</strong> 15.6 اینچ Full HD</p>
+
+            <p><strong>سلامت باتری:</strong>
+            <span class="good">۹۲٪ (عالی)</span></p>
+
+            <p><strong>وضعیت ظاهری:</strong>
+            <span class="good">بدون ضربه و شکستگی</span></p>
+
+        </div>
+
+        <div class="contact-box">
+            <p>☎️ تلفن ثابت: 031-12345678</p>
+            <p>📱 موبایل: 09123456789</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function openLaptop1(){
+document.getElementById("laptop1").style.display="block";
+}
+
+function closeLaptop1(){
+document.getElementById("laptop1").style.display="none";
+}
+
+window.onclick=function(event){
+
+var modal=document.getElementById("laptop1");
+
+if(event.target==modal){
+modal.style.display="none";
+}
+
+}
+    
+</script>
 
 </body>
 </html>
