@@ -446,3 +446,29 @@ font-size:20px;
     color:#aaa;
 
 }
+.cart-add-btn{
+
+    background:#00ff88;
+
+    color:#111;
+
+    border:none;
+
+    padding:14px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    margin-top:10px;
+
+}
+
+
+.cart-add-btn:hover{
+
+    background:#00cc6a;
+
+}
