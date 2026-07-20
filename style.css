@@ -365,3 +365,84 @@ font-size:20px;
 .contact-content a:hover{
     text-decoration:underline;
 }
+.footer{
+
+    margin-top:80px;
+
+    background:#161b22;
+
+    color:white;
+
+    padding:40px 20px 20px;
+
+    border-top:2px solid #00bfff;
+
+}
+
+
+.footer-content{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    text-align:right;
+
+}
+
+
+.footer-section h3{
+
+    color:#00bfff;
+
+    margin-bottom:20px;
+
+}
+
+
+.footer-section p{
+
+    line-height:2;
+
+    color:#ddd;
+
+}
+
+
+.footer-section a{
+
+    color:#00bfff;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+}
+
+
+.footer-section a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+.footer-bottom{
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:1px solid #333;
+
+    text-align:center;
+
+    color:#aaa;
+
+}
