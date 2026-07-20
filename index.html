@@ -16,6 +16,8 @@
 
 </head>
 
+<body>
+
 <header>
 
     <img src="لوگو.png" alt="لوگوی فروشگاه ایثارگران" class="logo">
@@ -80,5 +82,21 @@
 
     </div>
 </div>
+    <script>
+
+function openContact(){
+    document.getElementById("contactModal").style.display="block";
+}
+
+
+function closeContact(event){
+
+    if(!event || event.target.id=="contactModal"){
+        document.getElementById("contactModal").style.display="none";
+    }
+
+}
+
+</script>
 </body>
 </html>
