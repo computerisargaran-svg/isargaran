@@ -12,6 +12,11 @@ function closeOutside(event){
     }
 }
 
+function openContact(){
+
+    alert("شماره تماس:09138137176");
+
+}
 document.addEventListener("keydown",function(event){
 
     if(event.key==="Escape"){
