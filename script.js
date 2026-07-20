@@ -1,4 +1,3 @@
-
 function openModal(id){
     document.getElementById(id).style.display="block";
 }
@@ -26,3 +25,41 @@ document.addEventListener("keydown",function(event){
     }
 
 });
+
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+    alert("محصول به سبد خرید اضافه شد");
+}
+
+
+
+function updateCartCount(){
+
+    let count = document.getElementById("cart-count");
+
+    if(count){
+
+        count.innerHTML = cart.length;
+
+    }
+
+}
+
+
+updateCartCount();
