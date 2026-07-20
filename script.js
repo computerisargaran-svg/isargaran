@@ -63,3 +63,106 @@ function updateCartCount(){
 
 
 updateCartCount();
+// نمایش سبد خرید
+
+function showCart(){
+
+    let cartBox = document.getElementById("cart-items");
+
+    if(!cartBox) return;
+
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    if(cart.length === 0){
+
+        cartBox.innerHTML="<h3>سبد خرید شما خالی است</h3>";
+
+        document.getElementById("total-price").innerHTML="";
+
+        return;
+
+    }
+
+
+    let html="";
+
+    let total=0;
+
+
+    cart.forEach(function(item,index){
+
+
+        total += item.price;
+
+
+        html += `
+
+        <div class="product-card">
+
+        <h3>${item.name}</h3>
+
+        <p class="price">
+        ${item.price.toLocaleString()} تومان
+        </p>
+
+
+        <button class="buy-btn"
+        onclick="removeCart(${index})">
+
+        حذف
+
+        </button>
+
+
+        </div>
+
+        `;
+
+
+    });
+
+
+    cartBox.innerHTML=html;
+
+
+    document.getElementById("total-price").innerHTML=
+
+    "مبلغ کل: "+total.toLocaleString()+" تومان";
+
+}
+
+
+
+function removeCart(index){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    cart.splice(index,1);
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    showCart();
+
+    updateCartCount();
+
+}
+
+
+
+function clearCart(){
+
+    localStorage.removeItem("cart");
+
+    showCart();
+
+    updateCartCount();
+
+}
