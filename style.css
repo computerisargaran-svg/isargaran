@@ -702,3 +702,28 @@ justify-content:center;
     text-align:center;
 
 }
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-btn {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #0d1117;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-btn:hover {
+    background: #00bfff;
+    color: white;
+}
