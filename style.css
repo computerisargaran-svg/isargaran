@@ -31,7 +31,7 @@ button{
 
 header{
     background:#161b22;
-    width:80%;
+    width:min(1100px,90%);
     margin:30px auto 0;
     padding:40px;
     border-radius:20px;
@@ -44,7 +44,7 @@ header{
 }
 
 .hero{
-    width:80%;
+    width:min(1100px,90%);
     height:500px;
     margin:40px auto;
 
