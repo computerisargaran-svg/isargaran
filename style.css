@@ -35,7 +35,7 @@ header{
     margin:30px auto 0;
     padding:40px;
     border-radius:20px;
-    box-shadow:0 0 20px rgba(0,191,255,.3);
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
 }
 .subtitle{
     font-size:20px;
@@ -64,6 +64,8 @@ header{
     color:#fff;
 
     border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+overflow:hidden;
 }
 
 .hero-text{
@@ -113,6 +115,7 @@ transition:all .3s ease;
     padding:50px 25px;
 
     border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
 }
 
 .products h2{
