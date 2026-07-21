@@ -572,79 +572,100 @@ justify-content:center;
     max-width:none !important;
 }
 .feature-slider{
-    width:100%;
-    overflow:hidden;
-    margin-top:35px;
-    border-top:1px solid rgba(255,255,255,.1);
-    padding-top:20px;
-}
 
-.feature-track{
-    display:flex;
-    gap:70px;
-    width:max-content;
-    animation:scrollFeatures 20s linear infinite;
-}
-
-.feature-track span{
-    color:#00bfff;
-    font-size:24px;
-    font-weight:700;
-    white-space:nowrap;
-}
-
-@keyframes scrollFeatures{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
-}
-.feature-slider{
     width:100%;
     overflow:hidden;
 
     margin-top:35px;
     padding:18px 0;
 
-    border-top:1px solid rgba(255,255,255,.1);
-    border-bottom:1px solid rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.15);
 
-    background:rgba(0,191,255,.06);
-    border-radius:15px;
+    border-radius:18px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.15);
+
+    position:relative;
+}
+
+.feature-slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-150%;
+
+    width:50%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    animation:glassShine 5s linear infinite;
+
 }
 
 .feature-track{
+
     display:flex;
+
     gap:70px;
+
     width:max-content;
 
     animation:slide 22s linear infinite;
+
 }
 
 .feature-track span{
 
     display:flex;
+
     align-items:center;
+
     gap:12px;
 
-    color:#00bfff;
+    color:#00d4ff;
 
     font-size:24px;
+
     font-weight:700;
 
     white-space:nowrap;
 
-    text-shadow:0 0 12px rgba(0,191,255,.4);
+    text-shadow:0 0 12px rgba(0,191,255,.55);
 
 }
 
 .feature-track i{
-    font-size:26px;
+
+    color:#00bfff;
+
+    font-size:28px;
+
+    transition:.3s;
+
+}
+
+.feature-track span:hover i{
+
+    transform:scale(1.25) rotate(-10deg);
+
+    color:#6be8ff;
+
 }
 
 @keyframes slide{
@@ -655,6 +676,18 @@ justify-content:center;
 
     to{
         transform:translateX(-50%);
+    }
+
+}
+
+@keyframes glassShine{
+
+    from{
+        left:-150%;
+    }
+
+    to{
+        left:150%;
     }
 
 }
