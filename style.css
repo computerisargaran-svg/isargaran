@@ -571,3 +571,36 @@ justify-content:center;
     width:50px !important;
     max-width:none !important;
 }
+.feature-slider{
+    width:100%;
+    overflow:hidden;
+    margin-top:35px;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+}
+
+.feature-track{
+    display:flex;
+    gap:70px;
+    width:max-content;
+    animation:scrollFeatures 20s linear infinite;
+}
+
+.feature-track span{
+    color:#00bfff;
+    font-size:24px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+@keyframes scrollFeatures{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
