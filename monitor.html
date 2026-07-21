@@ -1,68 +1,193 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
 
 <meta charset="UTF-8">
 
-<title>مانیتورها | فروشگاه ایثارگران</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
+<title>فروشگاه ایثارگران</title>
 
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 
 <body>
 
-
 <header>
 
-<h1>مانیتورها</h1>
+    <img src="لوگو.png" alt="لوگوی فروشگاه ایثارگران" class="logo">
+
+    <h1>فروشگاه کامپیوتر ایثارگران</h1>
+
+    <p class="subtitle">
+        فروش تخصصی لپ‌تاپ، کیس، مانیتور، قطعات و لوازم جانبی کامپیوتر
+    </p>
+
+<button class="contact-btn" onclick="openContact()">
+    تماس با ما
+</button>
+<div class="feature-slider">
+    <div class="feature-track">
+
+        <div class="feature-group">
+            <span><i class="fa-solid fa-truck-fast"></i> ارسال سریع</span>
+            <span><i class="fa-solid fa-shield-halved"></i> مهلت تست کالا</span>
+            <span><i class="fa-solid fa-tags"></i> بهترین قیمت</span>
+            <span><i class="fa-solid fa-laptop"></i> لپ‌تاپ استوک تضمینی</span>
+            <span><i class="fa-solid fa-headset"></i> پشتیبانی واقعی</span>
+            <span><i class="fa-solid fa-star"></i> رضایت مشتریان</span>
+        </div>
+
+        <div class="feature-group">
+            <span><i class="fa-solid fa-truck-fast"></i> ارسال سریع</span>
+            <span><i class="fa-solid fa-shield-halved"></i> مهلت تست کالا</span>
+            <span><i class="fa-solid fa-tags"></i> بهترین قیمت</span>
+            <span><i class="fa-solid fa-laptop"></i> لپ‌تاپ استوک تضمینی</span>
+            <span><i class="fa-solid fa-headset"></i> پشتیبانی واقعی</span>
+            <span><i class="fa-solid fa-star"></i> رضایت مشتریان</span>
+        </div>
+
+    </div>
+</div>
+
+</header>
+   <section class="hero">
+
+    <div class="hero-text">
+
+        <h1>فروش لپ‌تاپ استوک و نو</h1>
+
+        <p>
+            انواع لپ‌تاپ‌های Dell، HP و Lenovo با بهترین قیمت و تضمین کیفیت
+        </p>
+
+        <div class="menu">
+
+<a href="laptop.html" class="btn">💻 لپ تاپ استوک</a>
+
+<a href="monitor.html" class="btn">🖥 مانیتور استوک</a>
+
+<a href="system.html" class="btn">🖥 سیستم</a>
+
+<a href="parts.html" class="btn">⚙ قطعات</a>
+
+        </div>
+
+    </div>
+
+</section>
+    <div id="contactModal" class="modal" onclick="closeContact(event)">
+    <div class="modal-content">
+
+        <span class="close" onclick="closeContact()">&times;</span>
+
+        <h2>تماس با ما</h2>
+
+        <p>📱 موبایل:</p>
+        <a href="tel:09138137176">
+            09138137176
+        </a>
+
+        <p>☎️ تلفن ثابت:</p>
+        <a href="tel:03133239380">
+            03133239380
+        </a>
+
+        <p>💬 کانال ایتا:</p>
+        <a href="https://eitaa.com/computer_isargaran" target="_blank">
+            @computer_isargaran
+        </a>
+
+    </div>
+</div>
+    <script>
+
+function openContact(){
+    document.getElementById("contactModal").style.display="block";
+}
 
 
-<a href="cart.html" class="cart-icon">
+function closeContact(event){
+
+    if(!event || event.target.id=="contactModal"){
+        document.getElementById("contactModal").style.display="none";
+    }
+
+}
+
+</script>
+    <footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>فروشگاه کامپیوتر ایثارگران</h3>
+
+            <p>
+                فروش تخصصی لپ‌تاپ، سیستم، قطعات و لوازم جانبی کامپیوتر
+            </p>
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>راه‌های ارتباطی</h3>
+
+            <p>📱 09138137176</p>
+            <p>📱 09127654118</p>
+
+            <p>☎️ 03133239380</p>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>آدرس فروشگاه</h3>
+
+            <p>
+                📍 اصفهان، خیابان طالقانی،
+                بازار بزرگ کامپیوتر،
+                طبقه زیرین، پلاک 46
+            </p>
+
+        </div>
+
+
+        <div class="footer-section">
+
+            <h3>شبکه‌های اجتماعی</h3>
+
+            <p>
+                💬 کانال ایتا:
+            </p>
+
+            <a href="https://eitaa.com/computer_isargaran" target="_blank">
+                @computer_isargaran
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © فروشگاه کامپیوتر ایثارگران - تمامی حقوق محفوظ است
+
+    </div>
+
+</footer>
+  
+    <a href="cart.html" class="cart-icon">
     🛒
     <span id="cart-count">0</span>
 </a>
-
-
-</header>
-
-
-
-<section class="products">
-
-<h2>انواع مانیتور</h2>
-
-<p>
-محصولات مانیتور به زودی اضافه می‌شوند.
-</p>
-
-
-</section>
-
-
-
-<footer>
-
-<h3>فروشگاه ایثارگران</h3>
-
-<p>
-فروش لپ تاپ، قطعات کامپیوتر و سیستم‌های آماده
-</p>
-
-<p>
-📞 تماس با ما: 09138137176
-</p>
-
-
-</footer>
-
-
-
-<script src="js/script.js"></script>
-
-
+      <script src="js/script.js"></script>
 </body>
-
 </html>
