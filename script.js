@@ -164,6 +164,8 @@ function removeCart(index){
 
 function clearCart(){
 
+    cart = [];
+
     localStorage.removeItem("cart");
 
     showCart();
