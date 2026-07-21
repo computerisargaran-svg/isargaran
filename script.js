@@ -37,19 +37,30 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price){
 
-    cart.push({
-        name:name,
-        price:price
-    });
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
+    let item = cart.find(product => product.name === name);
+
+    if(item){
+
+        item.quantity++;
+
+    }else{
+
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     updateCartCount();
 
     alert("محصول به سبد خرید اضافه شد");
+
 }
 
 
@@ -96,38 +107,47 @@ function showCart(){
     let total=0;
 
 
-    cart.forEach(function(item,index){
+cart.forEach(function(item,index){
 
+    total += item.price * item.quantity;
 
-        total += item.price;
+    html += `
 
-
-        html += `
-
-        <div class="product-card">
+    <div class="product-card">
 
         <h3>${item.name}</h3>
 
         <p class="price">
-        ${item.price.toLocaleString()} تومان
+            ${item.price.toLocaleString()} تومان
         </p>
 
+        <div class="quantity-box">
+
+            <button onclick="decreaseQuantity(${index})">-</button>
+
+            <span>${item.quantity}</span>
+
+            <button onclick="increaseQuantity(${index})">+</button>
+
+        </div>
+
+        <p class="price">
+            جمع:
+            ${(item.price * item.quantity).toLocaleString()} تومان
+        </p>
 
         <button class="buy-btn"
         onclick="removeCart(${index})">
 
-        حذف
+            حذف
 
         </button>
 
+    </div>
 
-        </div>
+    `;
 
-        `;
-
-
-    });
-
+});
 
     cartBox.innerHTML=html;
 
@@ -160,7 +180,42 @@ function removeCart(index){
 
 }
 
+function increaseQuantity(index){
 
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart[index].quantity++;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showCart();
+
+    updateCartCount();
+
+}
+
+
+function decreaseQuantity(index){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if(cart[index].quantity > 1){
+
+        cart[index].quantity--;
+
+    }else{
+
+        cart.splice(index,1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showCart();
+
+    updateCartCount();
+
+}
 
 function clearCart(){
 
