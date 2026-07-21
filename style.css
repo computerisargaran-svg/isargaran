@@ -704,26 +704,29 @@ justify-content:center;
 }
 .product-buttons {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+}
+
+.buy-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    height: 38px;
 }
 
 .cart-btn {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
     background: white;
     color: #0d1117;
     border: none;
-    border-radius: 10px;
-    font-size: 22px;
+    border-radius: 8px;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.cart-btn:hover {
-    background: #00bfff;
-    color: white;
+    align-items: center;
 }
