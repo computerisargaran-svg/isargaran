@@ -71,12 +71,21 @@ function updateCartCount(){
 
     if(count){
 
-        count.innerHTML = cart.length;
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let total = 0;
+
+        cart.forEach(function(item){
+
+            total += item.quantity || 1;
+
+        });
+
+        count.innerHTML = total;
 
     }
 
 }
-
 
 updateCartCount();
 // نمایش سبد خرید
