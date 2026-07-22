@@ -814,11 +814,13 @@ to{
     border-bottom:2px solid #00bfff;
 
     position:relative;
+    direction:ltr;
 }
 .top-menu{
     display:flex;
     gap:12px;
     flex-wrap:wrap;
+    direction:rtl;
 }
 
 .top-menu a{
