@@ -226,7 +226,7 @@ function decreaseQuantity(index){
 
 }
 
-function clearCart(){
+function clearCart() {
 
     cart = [];
 
@@ -237,26 +237,36 @@ function clearCart(){
     updateCartCount();
 
 }
+
+
 function closeNotice() {
-    document.getElementById("noticeModal").style.display = "none";
+
+    const notice = document.getElementById("noticeModal");
+
+    if (notice) {
+        notice.style.display = "none";
+    }
+
 }
 
-window.addEventListener("click", function (event) {
-    const modal = document.getElementById("noticeModal");
 
-    if (event.target === modal) {
-        closeNotice();
-    }
-});
-window.addEventListener("click", function(event){
-
-    const modal = document.getElementById("noticeModal");
-
-    if(event.target === modal){
-        closeNotice();
-    }
-
-});
 window.addEventListener("load", function () {
-    document.getElementById("noticeModal").style.display = "flex";
+
+    const notice = document.getElementById("noticeModal");
+
+    if (notice) {
+        notice.style.display = "flex";
+    }
+
+});
+
+
+window.addEventListener("click", function (event) {
+
+    const notice = document.getElementById("noticeModal");
+
+    if (event.target === notice) {
+        closeNotice();
+    }
+
 });
