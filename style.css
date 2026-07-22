@@ -817,14 +817,21 @@ to{
 }
 
 .top-bar{
+    width:100%;
+    background:#161b22;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-top:25px;
+
+    padding:15px 40px;
+    box-sizing:border-box;
+
+    border-bottom:2px solid #00bfff;
+
     flex-wrap:wrap;
     gap:15px;
 }
-
 .top-menu{
     display:flex;
     gap:12px;
