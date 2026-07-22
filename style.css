@@ -265,17 +265,7 @@ text-align:center;
 .contact-box p{
 margin:10px;
 font-size:20px;
-}
-.menu{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:40px;
-}
 
-.menu a{
-    text-decoration:none;
 }
 @media (max-width:768px){
 
@@ -494,50 +484,6 @@ font-size:20px;
     background:#00cc6a;
 
 }
-.cart-icon{
-
-position:fixed;
-
-top:20px;
-
-left:20px;
-
-width:50px;
-
-height:50px;
-
-background:#00bfff;
-
-color:white;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:25px;
-
-text-decoration:none;
-
-z-index:9999;
-
-box-shadow:0 0 15px rgba(0,191,255,.5);
-
-transition:.3s;
-
-}
-
-
-.cart-icon:hover{
-
-transform:scale(1.1);
-
-background:#0099cc;
-
-}
 
 
 #cart-count{
@@ -567,10 +513,7 @@ align-items:center;
 justify-content:center;
 
 }
-.cart-icon{
-    width:50px !important;
-    max-width:none !important;
-}
+
 .feature-slider{
     width:100%;
     overflow:hidden;
@@ -791,12 +734,6 @@ to{
     opacity:1;
 }
 
-}
-.cart-icon{
-    position:relative;
-    display:inline-block;
-    text-decoration:none;
-}
 
 .cart-dropdown{
 
@@ -821,6 +758,109 @@ to{
 
 }
 
-.cart-icon:hover .cart-dropdown{
-    display:block;
+
+
+.top-bar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:25px;
+
+}
+
+
+.top-menu{
+
+    display:flex;
+    gap:15px;
+    align-items:center;
+
+}
+
+.top-menu a{
+
+    text-decoration:none;
+    color:white;
+
+    background:#0088cc;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.top-menu a:hover{
+
+    background:#00bfff;
+
+}
+
+
+
+.header-cart{
+
+    position:relative;
+
+}
+
+.header-cart .cart-icon{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:50px;
+    height:50px;
+
+    background:#00bfff;
+
+    color:white;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    position:relative;
+
+}
+
+.header-cart .cart-icon:hover{
+
+    background:#0099cc;
+
+}
+
+.header-cart #cart-count{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:12px;
+
 }
