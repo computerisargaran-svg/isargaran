@@ -100,16 +100,15 @@ function showCart(){
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    if(cart.length === 0){
+  if(cart.length === 0){
 
-        cartBox.innerHTML="<h3>سبد خرید شما خالی است</h3>";
+    cartBox.innerHTML="<h3>سبد خرید شما خالی است</h3>";
 
-        document.getElementById("total-price").innerHTML="";
+    document.getElementById("total-price").innerHTML="";
 
-        return;
+    return;
 
-    }
-
+}
 
     let html="";
 
@@ -237,4 +236,6 @@ function clearCart() {
     updateCartCount();
 
 }
-
+document.addEventListener("DOMContentLoaded", function(){
+    showCart();
+});
