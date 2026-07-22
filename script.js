@@ -260,7 +260,6 @@ window.addEventListener("load", function () {
 
 });
 
-
 window.addEventListener("click", function (event) {
 
     const notice = document.getElementById("noticeModal");
