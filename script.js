@@ -241,10 +241,15 @@ function closeNotice() {
     document.getElementById("noticeModal").style.display = "none";
 }
 
-window.onclick = function(event) {
+window.addEventListener("click", function(event){
+
     const modal = document.getElementById("noticeModal");
 
     if(event.target === modal){
-        modal.style.display = "none";
+        closeNotice();
     }
-}
+
+});
+window.addEventListener("load", function () {
+    document.getElementById("noticeModal").style.display = "flex";
+});
