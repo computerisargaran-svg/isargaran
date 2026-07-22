@@ -47,11 +47,11 @@ function addToCart(name, price){
 
     }else{
 
-        cart.push({
-            name: name,
-            price: price,
-            quantity: 1
-        });
+cart.push({
+    name: name,
+    price: price,
+    quantity: 1
+});
 
     }
 
