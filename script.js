@@ -241,6 +241,13 @@ function closeNotice() {
     document.getElementById("noticeModal").style.display = "none";
 }
 
+window.addEventListener("click", function (event) {
+    const modal = document.getElementById("noticeModal");
+
+    if (event.target === modal) {
+        closeNotice();
+    }
+});
 window.addEventListener("click", function(event){
 
     const modal = document.getElementById("noticeModal");
