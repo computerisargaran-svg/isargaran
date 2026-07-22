@@ -117,7 +117,7 @@ function showCart(){
 
 cart.forEach(function(item,index){
 
-    total += item.price * item.quantity;
+    total += Number(item.price) * item.quantity;
 
     html += `
 
@@ -126,7 +126,7 @@ cart.forEach(function(item,index){
         <h3>${item.name}</h3>
 
         <p class="price">
-            ${item.price.toLocaleString()} تومان
+            ${Number(item.price).toLocaleString()} تومان
         </p>
 
         <div class="quantity-box">
@@ -141,14 +141,12 @@ cart.forEach(function(item,index){
 
         <p class="price">
             جمع:
-            ${(item.price * item.quantity).toLocaleString()} تومان
+            ${(Number(item.price) * item.quantity).toLocaleString()} تومان
         </p>
 
         <button class="buy-btn"
         onclick="removeCart(${index})">
-
             حذف
-
         </button>
 
     </div>
@@ -157,15 +155,10 @@ cart.forEach(function(item,index){
 
 });
 
-    cartBox.innerHTML=html;
+cartBox.innerHTML = html;
 
-
-    document.getElementById("total-price").innerHTML=
-
-    "مبلغ کل: "+total.toLocaleString()+" تومان";
-
-}
-
+document.getElementById("total-price").innerHTML =
+"مبلغ کل: " + total.toLocaleString() + " تومان";
 
 
 function removeCart(index){
