@@ -839,22 +839,10 @@ to{
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-
-    display:flex;
-    align-items:center;
-    gap:10px;
 }
-
 
 .top-logo .logo{
     width:65px;
     margin:0;
 }
 
-
-.top-logo h1{
-    font-size:22px;
-    margin:0;
-    color:#00bfff;
-    white-space:nowrap;
-}
