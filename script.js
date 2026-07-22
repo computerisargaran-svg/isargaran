@@ -93,7 +93,6 @@ function updateCartCount(){
 }
 
 updateCartCount();
-// نمایش سبد خرید
 
 function showCart(){
 
@@ -164,7 +163,7 @@ cartBox.innerHTML = html;
 
 document.getElementById("total-price").innerHTML =
 "مبلغ کل: " + total.toLocaleString() + " تومان";
-
+}
 
 function removeCart(index){
 
