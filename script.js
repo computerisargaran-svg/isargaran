@@ -237,3 +237,14 @@ function clearCart(){
     updateCartCount();
 
 }
+function closeNotice() {
+    document.getElementById("noticeModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("noticeModal");
+
+    if(event.target === modal){
+        modal.style.display = "none";
+    }
+}
