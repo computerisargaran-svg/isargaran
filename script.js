@@ -35,7 +35,6 @@ document.addEventListener("keydown",function(event){
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
 function addToCart(name, price){
 
     let item = cart.find(product => product.name === name);
@@ -77,9 +76,9 @@ function updateCartCount(){
 
     if(count){
 
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        let total = 0;
+      let total = 0;
 
         cart.forEach(function(item){
 
@@ -97,7 +96,7 @@ updateCartCount();
 
 function showCart(){
 
-    let cartBox = document.getElementById("cart-items");
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if(!cartBox) return;
 
