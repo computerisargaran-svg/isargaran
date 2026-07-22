@@ -18,9 +18,36 @@
 
 <body>
 
+<div class="top-bar">
+
+    <nav class="top-menu">
+        <a href="index.html">🏠 صفحه اصلی</a>
+        <a href="laptop.html">💻 لپ تاپ</a>
+        <a href="monitor.html">🖥 مانیتور</a>
+        <a href="system.html">🖥 سیستم</a>
+        <a href="parts.html">⚙ قطعات</a>
+    </nav>
+
+    <div class="header-cart">
+
+        <a href="cart.html" class="cart-icon">
+            🛒
+            <span id="cart-count">0</span>
+        </a>
+
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div id="cart-items">
+                هیچ محصولی در سبد خرید نیست.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
 <header>
 
-    <img src="لوگو.png" alt="لوگوی فروشگاه ایثارگران" class="logo">
+    <img src="لوگو.png" alt="لوگوی فروشگاه" class="logo">
 
     <h1>فروشگاه کامپیوتر آی.جی کالا</h1>
 
@@ -28,34 +55,13 @@
         فروش تخصصی لپ‌تاپ، کیس، مانیتور، قطعات و لوازم جانبی کامپیوتر
     </p>
 
-<button class="contact-btn" onclick="openContact()">
-    تماس با ما
-</button>
-<div class="feature-slider">
-    <div class="feature-track">
-
-        <div class="feature-group">
-            <span><i class="fa-solid fa-truck-fast"></i> ارسال سریع</span>
-            <span><i class="fa-solid fa-shield-halved"></i> مهلت تست کالا</span>
-            <span><i class="fa-solid fa-tags"></i> بهترین قیمت</span>
-            <span><i class="fa-solid fa-laptop"></i> لپ‌تاپ دست دوم تضمینی</span>
-            <span><i class="fa-solid fa-headset"></i> پشتیبانی واقعی</span>
-            <span><i class="fa-solid fa-star"></i> رضایت مشتریان</span>
-        </div>
-
-        <div class="feature-group">
-            <span><i class="fa-solid fa-truck-fast"></i> ارسال سریع</span>
-            <span><i class="fa-solid fa-shield-halved"></i> مهلت تست کالا</span>
-            <span><i class="fa-solid fa-tags"></i> بهترین قیمت</span>
-            <span><i class="fa-solid fa-laptop"></i> لپ‌تاپ دست دوم تضمینی</span>
-            <span><i class="fa-solid fa-headset"></i> پشتیبانی واقعی</span>
-            <span><i class="fa-solid fa-star"></i> رضایت مشتریان</span>
-        </div>
-
-    </div>
-</div>
+    <button class="contact-btn" onclick="openContact()">
+        تماس با ما
+    </button>
 
 </header>
+
+<!-- از اینجا به بعد محتوای مخصوص هر صفحه قرار می‌گیرد -->
    <section class="hero">
 
     <div class="hero-text">
