@@ -15,16 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
-<div class="top-bar">
 
-    <nav class="top-menu">
-        <a href="laptop.html">💻 لپ تاپ</a>
-        <a href="monitor.html">🖥 مانیتور</a>
-        <a href="system.html">🖥 سیستم</a>
-        <a href="parts.html">⚙ قطعات</a>
-    </nav>
+<div class="top-bar">
 
     <div class="header-cart">
 
@@ -41,25 +34,35 @@
 
     </div>
 
+
+    <div class="top-logo">
+
+        <img src="لوگو.png" alt="لوگوی فروشگاه ایثارگران" class="logo">
+
+        <h1>فروشگاه کامپیوتر آی.جی کالا</h1>
+
+    </div>
+
+
+    <nav class="top-menu">
+
+        <a href="laptop.html">💻 لپ تاپ</a>
+        <a href="monitor.html">🖥 مانیتور</a>
+        <a href="system.html">🖥 سیستم</a>
+        <a href="parts.html">⚙ قطعات</a>
+
+        <button class="contact-btn" onclick="openContact()">
+            تماس با ما
+        </button>
+
+    </nav>
+
+
 </div>
 
-<header>
-
-    <img src="لوگو.png" alt="لوگوی فروشگاه ایثارگران" class="logo">
-
-    <h1>فروشگاه کامپیوتر آی.جی کالا</h1>
-
-    <p class="subtitle">
-        فروش تخصصی لپ‌تاپ، کیس، مانیتور، قطعات و لوازم جانبی کامپیوتر
-    </p>
-
-    <button class="contact-btn" onclick="openContact()">
-        تماس با ما
-    </button>
-
-</header>
 
 <div class="feature-slider">
+
     <div class="feature-track">
 
         <div class="feature-group">
@@ -71,6 +74,7 @@
             <span><i class="fa-solid fa-star"></i> رضایت مشتریان</span>
         </div>
 
+
         <div class="feature-group">
             <span><i class="fa-solid fa-truck-fast"></i> ارسال سریع</span>
             <span><i class="fa-solid fa-shield-halved"></i> مهلت تست کالا</span>
@@ -81,10 +85,12 @@
         </div>
 
     </div>
+
 </div>
 
-</header>
-   <section class="hero">
+
+
+<section class="hero">
 
     <div class="hero-text">
 
@@ -97,7 +103,10 @@
     </div>
 
 </section>
-    <div id="contactModal" class="modal" onclick="closeContact(event)">
+
+
+<div id="contactModal" class="modal" onclick="closeContact(event)">
+
     <div class="modal-content">
 
         <span class="close" onclick="closeContact()">&times;</span>
@@ -120,6 +129,7 @@
         </a>
 
     </div>
+
 </div>
     <script>
 
