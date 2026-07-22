@@ -655,7 +655,7 @@ font-size:20px;
     align-items: center;
 }
 .notice-modal{
-    display:flex;
+    display:none;
     justify-content:center;
     align-items:center;
     position:fixed;
