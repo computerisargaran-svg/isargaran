@@ -1,3 +1,4 @@
+console.log("JS loaded");
 function openModal(id){
     document.getElementById(id).style.display="block";
 }
