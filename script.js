@@ -250,8 +250,15 @@ function closeNotice() {
 }
 
 
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
+    const notice = document.getElementById("noticeModal");
+
+    if (notice) {
+        notice.style.display = "flex";
+    }
+
+});
     const notice = document.getElementById("noticeModal");
 
     if (notice) {
