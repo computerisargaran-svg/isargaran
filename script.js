@@ -37,9 +37,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price){
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     let item = cart.find(product => product.name === name);
+
 
     if(item){
 
@@ -47,17 +46,23 @@ function addToCart(name, price){
 
     }else{
 
-cart.push({
-    name: name,
-    price: price,
-    quantity: 1
-});
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
 
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
 
     updateCartCount();
+
 
     alert("محصول به سبد خرید اضافه شد");
 
